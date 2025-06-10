@@ -61,10 +61,10 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col justify-center items-center relative z-10 px-6">
-        <div className="text-center text-white space-y-8 max-w-4xl mx-auto">
-          {/* Artist Name */}
-          <div className="space-y-4">
+      <div className="flex-1 flex flex-col justify-center items-center relative z-10 px-6 py-16">
+        <div className="text-center text-white space-y-16 max-w-4xl mx-auto">
+          {/* Artist Name - moved higher */}
+          <div className="space-y-4 -mt-32">
             <h1 className="text-5xl lg:text-7xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
               ИльяПалочкин
             </h1>
@@ -93,9 +93,9 @@ const HeroSection = () => {
             </div>
           </TooltipProvider>
 
-          {/* About Artist */}
-          <div className="space-y-6 mt-16">
-            <div className="space-y-4 pt-8 border-t border-purple-300/30">
+          {/* About Artist - moved lower */}
+          <div className="space-y-6 mt-32">
+            <div className="space-y-4 pt-0">
               <p className="text-xl font-semibold text-white">Кто я?</p>
               <p className="text-lg text-purple-200">Я молодой исполнитель</p>
               <p className="text-lg text-purple-200">
