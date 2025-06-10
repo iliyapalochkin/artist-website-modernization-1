@@ -93,10 +93,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* About Artist - positioned at bottom */}
-      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl relative z-10 px-6">
-        <div className="text-center text-white space-y-6">
-          <div className="space-y-4">
+      {/* About Artist - moved to very bottom */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-4xl relative z-10 px-6">
+        <div className="text-center text-white space-y-4">
+          <div className="space-y-3">
             <p className="text-xl font-semibold text-white">Кто я?</p>
             <p className="text-lg text-purple-200">Я молодой исполнитель</p>
             <p className="text-lg text-purple-200">
@@ -107,7 +107,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="flex justify-center gap-4 pt-6">
+          <div className="flex justify-center gap-4 pt-4">
             <Button
               size="lg"
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
