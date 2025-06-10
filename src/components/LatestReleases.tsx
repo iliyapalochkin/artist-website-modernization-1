@@ -10,13 +10,13 @@ const LatestReleases = () => {
       id: 2,
       cover:
         "https://cdn.poehali.dev/files/c44818ee-a2f5-4e44-b213-379551c63910.jpg",
-      link: "#", // заглушка
+      link: "https://music.yandex.ru/album/32756782?utm_source=web&utm_medium=copy_link",
     },
     {
       id: 3,
       cover:
         "https://cdn.poehali.dev/files/0fb4c253-9952-4220-823c-6a669422cc5f.jpg",
-      link: "#", // заглушка
+      link: "https://music.yandex.ru/album/32756782?utm_source=web&utm_medium=copy_link",
     },
   ];
 
