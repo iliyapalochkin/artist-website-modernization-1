@@ -14,39 +14,51 @@ const SocialFeed = () => {
   const posts = [
     {
       id: 1,
-      platform: "YouTube",
-      platformIcon: "Play",
-      content: "Новый трек 'Космические ритмы' - официальный клип",
-      timestamp: "2 дня назад",
-      likes: "4.2K",
-      comments: "89",
-      type: "video",
-      videoId: "dQw4w9WgXcQ", // Rick Roll для демо
-      videoType: "youtube",
-    },
-    {
-      id: 2,
       platform: "TikTok",
       platformIcon: "Video",
-      content: "За кулисами создания нового бита 🎵",
-      timestamp: "5 дней назад",
-      likes: "12.8K",
-      comments: "234",
+      content: "Новый трек в работе 🎵 Показываю процесс создания бита",
+      timestamp: "2 дня назад",
+      likes: "8.5K",
+      comments: "142",
       type: "video",
       videoId: "7234567890123456789",
       videoType: "tiktok",
     },
     {
-      id: 3,
-      platform: "YouTube",
-      platformIcon: "Play",
-      content: "Живое выступление на студии звукозаписи",
-      timestamp: "1 неделю назад",
-      likes: "8.9K",
-      comments: "167",
+      id: 2,
+      platform: "TikTok",
+      platformIcon: "Video",
+      content: "За кулисами студии звукозаписи 🎤 Записываю новый материал",
+      timestamp: "5 дней назад",
+      likes: "12.3K",
+      comments: "234",
       type: "video",
-      videoId: "jNQXAC9IVRw", // Me at the zoo для демо
-      videoType: "youtube",
+      videoId: "7345678901234567890",
+      videoType: "tiktok",
+    },
+    {
+      id: 3,
+      platform: "TikTok",
+      platformIcon: "Video",
+      content: "Живое исполнение нового трека 🔥 Ваше мнение?",
+      timestamp: "1 неделю назад",
+      likes: "15.7K",
+      comments: "298",
+      type: "video",
+      videoId: "7456789012345678901",
+      videoType: "tiktok",
+    },
+    {
+      id: 4,
+      platform: "TikTok",
+      platformIcon: "Video",
+      content: "Показываю любимые VST плагины для создания музыки",
+      timestamp: "2 недели назад",
+      likes: "9.2K",
+      comments: "156",
+      type: "video",
+      videoId: "7567890123456789012",
+      videoType: "tiktok",
     },
   ];
 
@@ -159,17 +171,35 @@ const SocialFeed = () => {
 
         <div className="text-center mt-12">
           <div className="flex justify-center space-x-4">
-            <Button className="bg-pink-600 hover:bg-pink-700">
+            <Button
+              className="bg-pink-600 hover:bg-pink-700"
+              onClick={() =>
+                window.open("https://www.tiktok.com/@iliapalochkin1", "_blank")
+              }
+            >
               <Icon name="Video" size={20} />
               Подписаться в TikTok
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              <Icon name="Users" size={20} />
-              Подписаться на iliapalochkin
+            <Button
+              className="bg-purple-600 hover:bg-purple-700"
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/iliapalochkin1",
+                  "_blank",
+                )
+              }
+            >
+              <Icon name="Instagram" size={20} />
+              Подписаться в Instagram
             </Button>
-            <Button className="bg-red-600 hover:bg-red-700">
-              <Icon name="Play" size={20} />
-              Подписаться на YouTube
+            <Button
+              className="bg-blue-600 hover:bg-blue-700"
+              onClick={() =>
+                window.open("https://vk.com/iliapalochkin1", "_blank")
+              }
+            >
+              <Icon name="Users" size={20} />
+              Подписаться в VK
             </Button>
           </div>
         </div>
