@@ -3,31 +3,41 @@ import Icon from "@/components/ui/icon";
 
 const Footer = () => {
   const socialLinks = [
-    { name: "TikTok", icon: "Video", url: "#", color: "hover:text-pink-400" },
+    {
+      name: "Telegram",
+      icon: "Send",
+      url: "https://t.me/iliapalochkin",
+      color: "hover:text-blue-400",
+    },
     {
       name: "ВКонтакте",
       icon: "Users",
-      url: "#",
-      color: "hover:text-blue-400",
+      url: "https://vk.com/iliapalochkin",
+      color: "hover:text-blue-600",
+    },
+    {
+      name: "TikTok",
+      icon: "Video",
+      url: "https://www.tiktok.com/@iliapalochkin1?_t=ZT-8uJcjVvO2nO&_r=1",
+      color: "hover:text-pink-400",
+    },
+    {
+      name: "Instagram",
+      icon: "Camera",
+      url: "https://www.instagram.com/ilia.palochkin",
+      color: "hover:text-purple-400",
     },
     {
       name: "Яндекс.Музыка",
       icon: "Music",
-      url: "#",
+      url: "https://music.yandex.ru/artist/21863635",
       color: "hover:text-yellow-400",
     },
     {
-      name: "Spotify",
-      icon: "Headphones",
-      url: "#",
-      color: "hover:text-green-400",
-    },
-    { name: "YouTube", icon: "Play", url: "#", color: "hover:text-red-400" },
-    {
-      name: "Instagram",
-      icon: "Camera",
-      url: "#",
-      color: "hover:text-purple-400",
+      name: "YouTube",
+      icon: "Play",
+      url: "https://youtube.com/@IliaPalochkin",
+      color: "hover:text-red-400",
     },
   ];
 
@@ -48,14 +58,20 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             {socialLinks.map((link) => (
-              <Button
+              <a
                 key={link.name}
-                variant="ghost"
-                size="icon"
-                className={`text-gray-400 ${link.color} transition-colors duration-300`}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Icon name={link.icon as any} size={24} />
-              </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className={`text-gray-400 ${link.color} transition-colors duration-300`}
+                >
+                  <Icon name={link.icon as any} size={24} />
+                </Button>
+              </a>
             ))}
           </div>
 
