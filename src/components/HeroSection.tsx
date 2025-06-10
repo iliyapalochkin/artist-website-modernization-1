@@ -64,7 +64,7 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col justify-center items-center relative z-10 px-6 py-16">
         <div className="text-center text-white space-y-16 max-w-4xl mx-auto">
           {/* Artist Name - moved higher */}
-          <div className="space-y-4 -mt-40">
+          <div className="space-y-4 mt-8">
             <h1 className="text-5xl lg:text-7xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
               ИльяПалочкин
             </h1>
@@ -72,7 +72,7 @@ const HeroSection = () => {
 
           {/* Social Links - moved higher */}
           <TooltipProvider>
-            <div className="flex justify-center space-x-4 -mt-8">
+            <div className="flex justify-center space-x-4 mt-8">
               {socialLinks.map((link) => (
                 <Tooltip key={link.name}>
                   <TooltipTrigger asChild>
@@ -94,7 +94,7 @@ const HeroSection = () => {
           </TooltipProvider>
 
           {/* About Artist - moved lower */}
-          <div className="space-y-6 mt-40">
+          <div className="space-y-6 mt-20 absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
             <div className="space-y-4 pt-0">
               <p className="text-xl font-semibold text-white">Кто я?</p>
               <p className="text-lg text-purple-200">Я молодой исполнитель</p>
