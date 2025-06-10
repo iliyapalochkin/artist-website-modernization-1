@@ -80,11 +80,7 @@ const HeroSection = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 ${
-                      link.name === "Слушать музыку"
-                        ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:from-orange-600 hover:to-pink-600"
-                        : "bg-white/10 hover:bg-white/20 border border-white/30 text-white"
-                    }`}
+                    className={`p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 ${link.color}`}
                   >
                     <Icon name={link.icon as any} size={24} />
                   </a>
@@ -118,24 +114,26 @@ const HeroSection = () => {
           <div className="flex justify-center gap-4 pt-4">
             <Button
               size="lg"
-              className="bg-white text-purple-600 hover:bg-purple-50"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
+              onClick={() =>
+                window.open(
+                  "https://music.yandex.ru/artist/21863635?utm_source=web&utm_medium=copy_link",
+                  "_blank",
+                )
+              }
             >
+              <Icon name="Play" size={20} />
               Слушать музыку
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-purple-600"
-              asChild
+            <a
+              href="https://www.donationalerts.com/r/djmusicdj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <a
-                href="https://www.donationalerts.com/r/qweqweqweqwe"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Поддержать ❤️
-              </a>
-            </Button>
+              <Icon name="Heart" className="mr-2" size={20} />
+              Поддержать
+            </a>
           </div>
         </div>
       </div>
