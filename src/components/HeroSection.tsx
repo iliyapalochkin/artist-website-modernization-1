@@ -60,19 +60,17 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col justify-center items-center relative z-10 px-6 py-16">
-        <div className="text-center text-white space-y-16 max-w-4xl mx-auto">
-          {/* Artist Name - moved higher */}
-          <div className="space-y-4 mt-8">
-            <h1 className="text-5xl lg:text-7xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+      {/* Artist Name and Social Links - moved to top */}
+      <div className="relative z-10 pt-8 px-6">
+        <div className="text-center text-white space-y-6 max-w-4xl mx-auto">
+          <div className="space-y-4">
+            <h1 className="text-4xl lg:text-6xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
               ИльяПалочкин
             </h1>
           </div>
 
-          {/* Social Links - moved higher */}
           <TooltipProvider>
-            <div className="flex justify-center space-x-4 mt-8">
+            <div className="flex justify-center space-x-4">
               {socialLinks.map((link) => (
                 <Tooltip key={link.name}>
                   <TooltipTrigger asChild>
@@ -92,49 +90,50 @@ const HeroSection = () => {
               ))}
             </div>
           </TooltipProvider>
+        </div>
+      </div>
 
-          {/* About Artist - moved lower */}
-          <div className="space-y-6 mt-20 absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
-            <div className="space-y-4 pt-0">
-              <p className="text-xl font-semibold text-white">Кто я?</p>
-              <p className="text-lg text-purple-200">Я молодой исполнитель</p>
-              <p className="text-lg text-purple-200">
-                И в своем блоге делюсь своими мыслями через свою честную музыку
-                🫀
-              </p>
-              <p className="text-lg text-purple-200 max-w-2xl mx-auto">
-                Уверен, что Ты можешь стать кем угодно, если постараешься.
-              </p>
-            </div>
+      {/* About Artist - positioned at bottom */}
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl relative z-10 px-6">
+        <div className="text-center text-white space-y-6">
+          <div className="space-y-4">
+            <p className="text-xl font-semibold text-white">Кто я?</p>
+            <p className="text-lg text-purple-200">Я молодой исполнитель</p>
+            <p className="text-lg text-purple-200">
+              И в своем блоге делюсь своими мыслями через свою честную музыку 🫀
+            </p>
+            <p className="text-lg text-purple-200 max-w-2xl mx-auto">
+              Уверен, что Ты можешь стать кем угодно, если постараешься.
+            </p>
+          </div>
 
-            <div className="flex justify-center gap-4 pt-6">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
-                onClick={() =>
-                  window.open(
-                    "https://music.yandex.ru/artist/21863635?utm_source=web&utm_medium=copy_link",
-                    "_blank",
-                  )
-                }
-              >
-                <Icon name="Play" size={20} />
-                Слушать музыку
-              </Button>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold px-8 py-3"
-                onClick={() =>
-                  window.open(
-                    "https://www.donationalerts.com/r/iliapalochkin",
-                    "_blank",
-                  )
-                }
-              >
-                <Icon name="Heart" size={20} />
-                Поддержать
-              </Button>
-            </div>
+          <div className="flex justify-center gap-4 pt-6">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
+              onClick={() =>
+                window.open(
+                  "https://music.yandex.ru/artist/21863635?utm_source=web&utm_medium=copy_link",
+                  "_blank",
+                )
+              }
+            >
+              <Icon name="Play" size={20} />
+              Слушать музыку
+            </Button>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold px-8 py-3"
+              onClick={() =>
+                window.open(
+                  "https://www.donationalerts.com/r/iliapalochkin",
+                  "_blank",
+                )
+              }
+            >
+              <Icon name="Heart" size={20} />
+              Поддержать
+            </Button>
           </div>
         </div>
       </div>
