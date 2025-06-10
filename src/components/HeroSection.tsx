@@ -64,15 +64,15 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col justify-center items-center relative z-10 px-6 py-16">
         <div className="text-center text-white space-y-16 max-w-4xl mx-auto">
           {/* Artist Name - moved higher */}
-          <div className="space-y-4 -mt-32">
+          <div className="space-y-4 -mt-40">
             <h1 className="text-5xl lg:text-7xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
               ИльяПалочкин
             </h1>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links - moved higher */}
           <TooltipProvider>
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4 -mt-8">
               {socialLinks.map((link) => (
                 <Tooltip key={link.name}>
                   <TooltipTrigger asChild>
@@ -94,7 +94,7 @@ const HeroSection = () => {
           </TooltipProvider>
 
           {/* About Artist - moved lower */}
-          <div className="space-y-6 mt-32">
+          <div className="space-y-6 mt-40">
             <div className="space-y-4 pt-0">
               <p className="text-xl font-semibold text-white">Кто я?</p>
               <p className="text-lg text-purple-200">Я молодой исполнитель</p>
@@ -107,7 +107,7 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="flex justify-center pt-6">
+            <div className="flex justify-center gap-4 pt-6">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
@@ -120,6 +120,19 @@ const HeroSection = () => {
               >
                 <Icon name="Play" size={20} />
                 Слушать музыку
+              </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold px-8 py-3"
+                onClick={() =>
+                  window.open(
+                    "https://www.donationalerts.com/r/iliapalochkin",
+                    "_blank",
+                  )
+                }
+              >
+                <Icon name="Heart" size={20} />
+                Поддержать
               </Button>
             </div>
           </div>
