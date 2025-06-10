@@ -107,16 +107,23 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="space-y-4 pt-8 border-t border-purple-300/30">
-              <p className="text-xl font-semibold text-white">Кто я?</p>
-              <p className="text-lg text-purple-200">Я молодой исполнитель</p>
-              <p className="text-lg text-purple-200">
-                И в своем блоге делюсь своими мыслями через свою честную музыку
-                🫀
-              </p>
-              <p className="text-lg text-purple-200 max-w-2xl mx-auto">
-                Уверен, что Ты можешь стать кем угодно, если постараешься.
-              </p>
+            {/* Who Am I Section */}
+            <div className="space-y-6">
+              <h2 className="text-2xl lg:text-3xl font-semibold text-purple-200">
+                Кто я?
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold mb-3 text-purple-200">
+                    Музыкант
+                  </h3>
+                  <p className="text-gray-200">
+                    Создаю музыку в разных стилях, экспериментирую со звуком и
+                    делюсь своим творчеством с миром.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
