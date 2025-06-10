@@ -13,42 +13,42 @@ const LatestReleases = () => {
   const releases = [
     {
       id: 1,
-      title: "Не отдам",
+      title: "Лучший день",
       type: "Single",
       date: "2024",
       cover:
         "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=300&h=300&fit=crop",
-      streams: "2.3M",
+      streams: "1.2M",
       isNew: true,
     },
     {
       id: 2,
-      title: "Мама не горюй",
+      title: "Небо",
       type: "Single",
       date: "2024",
       cover:
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=300&fit=crop",
-      streams: "1.8M",
+      streams: "890K",
       isNew: true,
     },
     {
       id: 3,
-      title: "Осколки",
+      title: "Ветер перемен",
       type: "Single",
       date: "2023",
       cover:
         "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop",
-      streams: "3.1M",
+      streams: "2.1M",
       isNew: false,
     },
     {
       id: 4,
-      title: "Между нами",
-      type: "Single",
+      title: "Дорога домой",
+      type: "Album",
       date: "2023",
       cover:
         "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop",
-      streams: "2.7M",
+      streams: "1.8M",
       isNew: false,
     },
   ];
