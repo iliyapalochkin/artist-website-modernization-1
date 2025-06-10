@@ -27,6 +27,27 @@ const LatestReleases = () => {
           <h2 className="text-4xl lg:text-5xl font-bold font-montserrat text-white mb-4">
             Последние релизы
           </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Свежие треки и альбомы, которые покоряют чарты
+          </p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {releases.map((release) => (
+            <a
+              key={release.id}
+              href={release.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
+            >
+              <img
+                src={release.cover}
+                alt="Release cover"
+                className="w-full aspect-square object-cover rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </section>
