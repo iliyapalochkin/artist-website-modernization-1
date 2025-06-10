@@ -20,8 +20,8 @@ const SocialFeed = () => {
       timestamp: "2 часа назад",
       likes: "12.5K",
       comments: "284",
-      image:
-        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop",
+      videoId: "7285947017618689307",
+      type: "video",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const SocialFeed = () => {
       timestamp: "1 день назад",
       likes: "8.9K",
       comments: "156",
-      image: null,
+      type: "text",
     },
     {
       id: 3,
@@ -42,8 +42,8 @@ const SocialFeed = () => {
       timestamp: "3 дня назад",
       likes: "25.1K",
       comments: "467",
-      image:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+      videoId: "7342856194726366511",
+      type: "video",
     },
   ];
 
@@ -99,12 +99,17 @@ const SocialFeed = () => {
               <CardContent className="space-y-4">
                 <p className="text-gray-300 text-lg">{post.content}</p>
 
-                {post.image && (
-                  <div className="rounded-lg overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt="Post content"
-                      className="w-full h-64 object-cover"
+                {post.type === "video" && post.videoId && (
+                  <div className="rounded-lg overflow-hidden bg-black">
+                    <iframe
+                      src={`https://www.tiktok.com/embed/v2/${post.videoId}`}
+                      width="100%"
+                      height="400"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full rounded-lg"
+                      title={`TikTok video ${post.id}`}
                     />
                   </div>
                 )}
