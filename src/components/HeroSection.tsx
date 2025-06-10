@@ -69,8 +69,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Social Links - centered */}
-      <div className="relative z-10 flex-1 flex items-center justify-center px-6">
+      {/* Social Links - moved higher */}
+      <div className="relative z-10 pt-12 px-6">
         <TooltipProvider>
           <div className="flex justify-center space-x-4">
             {socialLinks.map((link) => (
@@ -93,6 +93,9 @@ const HeroSection = () => {
           </div>
         </TooltipProvider>
       </div>
+
+      {/* Spacer to push content to bottom */}
+      <div className="flex-1"></div>
 
       {/* About Artist - at bottom on image background */}
       <div className="relative z-10 pb-8 px-6">
