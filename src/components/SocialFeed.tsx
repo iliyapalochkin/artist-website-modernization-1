@@ -63,18 +63,18 @@ const SocialFeed = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold font-montserrat text-white mb-4">
+    <section className="py-12 md:py-20 bg-gray-900">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-montserrat text-white mb-4">
             Социальные сети
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
             Следи за новостями и закулисьем в моих соцсетях
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
           {posts.map((post) => (
             <Card
               key={post.id}
@@ -126,42 +126,44 @@ const SocialFeed = () => {
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full rounded-lg"
+                        className="w-full rounded-lg aspect-video"
                         title={`YouTube video ${post.id}`}
                       />
                     ) : (
                       <iframe
                         src={`https://www.tiktok.com/embed/v2/${post.videoId}`}
                         width="100%"
-                        height="400"
+                        height="300"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full rounded-lg"
+                        className="w-full rounded-lg h-[300px] md:h-[400px]"
                         title={`TikTok video ${post.id}`}
                       />
                     )}
                   </div>
                 )}
 
-                <div className="flex items-center justify-between pt-4 border-t border-gray-700">
-                  <div className="flex items-center space-x-6 text-gray-400">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-4 border-t border-gray-700 gap-3">
+                  <div className="flex items-center space-x-4 md:space-x-6 text-gray-400">
                     <div className="flex items-center space-x-2">
                       <Icon name="Heart" size={18} />
-                      <span>{post.likes}</span>
+                      <span className="text-sm md:text-base">{post.likes}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Icon name="MessageCircle" size={18} />
-                      <span>{post.comments}</span>
+                      <span className="text-sm md:text-base">
+                        {post.comments}
+                      </span>
                     </div>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-gray-400 hover:text-white"
+                    className="text-gray-400 hover:text-white self-start sm:self-auto"
                   >
                     <Icon name="ExternalLink" size={16} />
-                    Открыть пост
+                    <span className="ml-2">Открыть пост</span>
                   </Button>
                 </div>
               </CardContent>
@@ -169,19 +171,19 @@ const SocialFeed = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="flex justify-center space-x-4">
+        <div className="text-center mt-8 md:mt-12">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
             <Button
-              className="bg-pink-600 hover:bg-pink-700"
+              className="bg-pink-600 hover:bg-pink-700 w-full sm:w-auto"
               onClick={() =>
                 window.open("https://www.tiktok.com/@iliapalochkin1", "_blank")
               }
             >
               <Icon name="Video" size={20} />
-              Подписаться в TikTok
+              <span className="ml-2">Подписаться в TikTok</span>
             </Button>
             <Button
-              className="bg-purple-600 hover:bg-purple-700"
+              className="bg-purple-600 hover:bg-purple-700 w-full sm:w-auto"
               onClick={() =>
                 window.open(
                   "https://www.instagram.com/iliapalochkin1",
@@ -190,16 +192,16 @@ const SocialFeed = () => {
               }
             >
               <Icon name="Instagram" size={20} />
-              Подписаться в Instagram
+              <span className="ml-2">Подписаться в Instagram</span>
             </Button>
             <Button
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
               onClick={() =>
                 window.open("https://vk.com/iliapalochkin1", "_blank")
               }
             >
               <Icon name="Users" size={20} />
-              Подписаться в VK
+              <span className="ml-2">Подписаться в VK</span>
             </Button>
           </div>
         </div>

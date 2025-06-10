@@ -42,21 +42,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black py-16">
-      <div className="container mx-auto px-6">
-        <div className="text-center space-y-8">
+    <footer className="bg-black py-12 md:py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center space-y-6 md:space-y-8">
           {/* Logo */}
           <div>
-            <h3 className="text-3xl font-bold font-montserrat bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h3 className="text-2xl md:text-3xl font-bold font-montserrat bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               DJ АРТИСТ
             </h3>
-            <p className="text-gray-400 mt-2">
+            <p className="text-gray-400 mt-2 text-sm md:text-base">
               Создаю музыку, которая зажигает сердца
             </p>
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-4 md:space-x-6 overflow-x-auto pb-2">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
@@ -77,26 +77,26 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-4">
-            <div className="flex justify-center space-x-8 text-gray-400">
-              <div className="flex items-center space-x-2">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 text-gray-400 text-sm md:text-base">
+              <div className="flex items-center justify-center space-x-2">
                 <Icon name="Mail" size={18} />
                 <span>djartist@music.com</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-center space-x-2">
                 <Icon name="MapPin" size={18} />
                 <span>Москва, Россия</span>
               </div>
             </div>
 
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 w-full sm:w-auto">
               <Icon name="Send" size={18} />
-              Связаться для коллабораций
+              <span className="ml-2">Связаться для коллабораций</span>
             </Button>
           </div>
 
           {/* Copyright */}
-          <div className="pt-8 border-t border-gray-800">
-            <p className="text-gray-500">
+          <div className="pt-6 md:pt-8 border-t border-gray-800">
+            <p className="text-gray-500 text-xs md:text-sm">
               © 2024 DJ АРТИСТ. Все права защищены.
               <span className="mx-2">•</span>
               Сделано с ❤️ и музыкой

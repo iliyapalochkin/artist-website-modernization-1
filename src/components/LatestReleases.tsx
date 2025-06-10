@@ -21,18 +21,18 @@ const LatestReleases = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold font-montserrat text-white mb-4">
+    <section className="py-12 md:py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-montserrat text-white mb-4">
             Последние релизы
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
             Свежие треки и альбомы, которые покоряют чарты
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
           {releases.map((release) => (
             <a
               key={release.id}
