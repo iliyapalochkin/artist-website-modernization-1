@@ -84,7 +84,7 @@ const HeroSection = () => {
                   >
                     <Icon
                       name={link.icon as any}
-                      size={20}
+                      size={16}
                       className="md:w-6 md:h-6"
                     />
                   </a>
