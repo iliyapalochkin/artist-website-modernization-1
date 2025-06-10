@@ -80,7 +80,11 @@ const HeroSection = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 ${link.color}`}
+                    className={`p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 ${
+                      link.name === "Слушать музыку"
+                        ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:from-orange-600 hover:to-pink-600"
+                        : "bg-white/10 hover:bg-white/20 border border-white/30 text-white"
+                    }`}
                   >
                     <Icon name={link.icon as any} size={24} />
                   </a>
