@@ -14,36 +14,36 @@ const SocialFeed = () => {
   const posts = [
     {
       id: 1,
-      platform: "TikTok",
-      platformIcon: "Video",
-      content: "Новый трек уже в работе! 🔥 Скоро будет что-то невероятное",
+      platform: "ВКонтакте",
+      platformIcon: "Users",
+      content:
+        "Новые треки в работе! 🎵 Скоро поделюсь с вами свежими битами и мелодиями. Следите за обновлениями!",
       timestamp: "2 часа назад",
-      likes: "12.5K",
-      comments: "284",
-      videoId: "7285947017618689307",
-      type: "video",
+      likes: "2.1K",
+      comments: "89",
+      type: "text",
     },
     {
       id: 2,
       platform: "ВКонтакте",
       platformIcon: "Users",
       content:
-        "Спасибо всем за поддержку последнего релиза! Midnight Vibes уже набрал более 2 миллионов прослушиваний. Это безумие! 🚀",
+        "За студийным пультом ✨ Работаю над новым материалом. Каждый трек - это частичка души, вложенная в музыку.",
       timestamp: "1 день назад",
-      likes: "8.9K",
+      likes: "3.5K",
       comments: "156",
       type: "text",
     },
     {
       id: 3,
-      platform: "TikTok",
-      platformIcon: "Video",
-      content: "За кулисами студии. Показываю, как создается магия ✨",
+      platform: "ВКонтакте",
+      platformIcon: "Users",
+      content:
+        "Спасибо всем за поддержку! 🔥 Ваши комментарии и отклики вдохновляют на создание новой музыки. Iliapalochkin продолжает творить!",
       timestamp: "3 дня назад",
-      likes: "25.1K",
-      comments: "467",
-      videoId: "7342856194726366511",
-      type: "video",
+      likes: "4.2K",
+      comments: "234",
+      type: "text",
     },
   ];
 
@@ -69,11 +69,13 @@ const SocialFeed = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <Avatar>
-                      <AvatarImage src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=50&h=50&fit=crop&crop=face" />
-                      <AvatarFallback>DJ</AvatarFallback>
+                      <AvatarImage src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=50&h=50&fit=crop&crop=face" />
+                      <AvatarFallback>IP</AvatarFallback>
                     </Avatar>
                     <div>
-                      <CardTitle className="text-white">DJ АРТИСТ</CardTitle>
+                      <CardTitle className="text-white">
+                        iliapalochkin
+                      </CardTitle>
                       <CardDescription className="flex items-center text-gray-400">
                         <Icon
                           name={post.platformIcon as any}
@@ -147,7 +149,7 @@ const SocialFeed = () => {
             </Button>
             <Button className="bg-blue-600 hover:bg-blue-700">
               <Icon name="Users" size={20} />
-              Подписаться ВКонтакте
+              Подписаться на iliapalochkin
             </Button>
           </div>
         </div>
