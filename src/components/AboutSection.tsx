@@ -1,92 +1,42 @@
-import { Card, CardContent } from "@/components/ui/card";
-import Icon from "@/components/ui/icon";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
-  const stats = [
-    { icon: "Music", value: "50+", label: "Треков" },
-    { icon: "Users", value: "100K+", label: "Слушателей" },
-    { icon: "Award", value: "15", label: "Наград" },
-    { icon: "Globe", value: "25", label: "Стран" },
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
+        <div className="max-w-4xl mx-auto text-center space-y-12">
+          {/* Донаты секция */}
           <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-bold font-montserrat text-white mb-6">
-                О себе
-              </h2>
-              <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-                <p>
-                  Привет! Я — молодой продюсер и DJ, который создает музыку на
-                  стыке электроники, хип-хопа и поп-культуры. Мой путь в музыке
-                  начался 5 лет назад с простого желания делиться эмоциями через
-                  звук.
-                </p>
-                <p>
-                  За это время я выпустил более 50 треков, которые набрали
-                  миллионы прослушиваний на всех платформах. Моя музыка звучит в
-                  клубах от Москвы до Токио, а каждый новый релиз — это история,
-                  рассказанная через биты и мелодии.
-                </p>
-                <p>
-                  Вдохновляюсь жизнью больших городов, неоновыми огнями и
-                  энергией молодости. Верю, что музыка может изменить мир, и
-                  стараюсь вкладывать душу в каждый трек.
-                </p>
-              </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <Card
-                  key={index}
-                  className="bg-gray-800/50 border-gray-700 text-center"
-                >
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Icon
-                        name={stat.icon as any}
-                        size={24}
-                        className="text-white"
-                      />
-                    </div>
-                    <div className="text-2xl font-bold text-white">
-                      {stat.value}
-                    </div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold font-montserrat text-white">
+              Донаты в Яндекс Музыке
+            </h2>
+            <p className="text-xl text-gray-300">
+              Поддерживайте любимых артистов
+            </p>
+            <p className="text-lg text-gray-400">
+              На микроавтобус, чтобы поехать в тур
+            </p>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-8 py-3 rounded-full"
+            >
+              Поддержать
+            </Button>
           </div>
 
-          {/* Image */}
-          <div className="relative">
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=600&fit=crop"
-                alt="Студия звукозаписи"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-black/50 backdrop-blur-sm rounded-xl p-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-white font-semibold">
-                      Сейчас в студии
-                    </span>
-                  </div>
-                  <p className="text-gray-300 text-sm mt-1">
-                    Работаю над новым альбомом
-                  </p>
-                </div>
-              </div>
+          {/* О себе секция */}
+          <div className="space-y-8 pt-12 border-t border-gray-700">
+            <h3 className="text-3xl lg:text-4xl font-bold font-montserrat text-white">
+              ИльяПалочкин
+            </h3>
+            <div className="space-y-6 text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="text-xl font-semibold text-white">Кто я?</p>
+              <p>Я молодой исполнитель</p>
+              <p>
+                И в своем блоге делюсь своими мыслями через свою честную музыку
+                🫀
+              </p>
+              <p>Уверен, что Ты можешь стать кем угодно, если постараешься.</p>
             </div>
           </div>
         </div>
