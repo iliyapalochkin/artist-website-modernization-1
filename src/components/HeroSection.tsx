@@ -48,57 +48,54 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative flex flex-col">
-      {/* Hero Section with Background */}
-      <div className="relative min-h-screen flex flex-col overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('https://cdn.poehali.dev/files/f66a526a-4051-49fd-ae49-d820da040b77.jpg')",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://cdn.poehali.dev/files/f66a526a-4051-49fd-ae49-d820da040b77.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
 
-        {/* Artist Name and Social Links */}
-        <div className="relative z-10 pt-8 px-6 flex-1 flex items-center justify-center">
-          <div className="text-center text-white space-y-6 max-w-4xl mx-auto">
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                ИльяПалочкин
-              </h1>
-            </div>
-
-            <TooltipProvider>
-              <div className="flex justify-center space-x-4">
-                {socialLinks.map((link) => (
-                  <Tooltip key={link.name}>
-                    <TooltipTrigger asChild>
-                      <a
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 ${link.color}`}
-                      >
-                        <Icon name={link.icon as any} size={24} />
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{link.name}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                ))}
-              </div>
-            </TooltipProvider>
+      {/* Artist Name and Social Links - moved to top */}
+      <div className="relative z-10 pt-8 px-6">
+        <div className="text-center text-white space-y-6 max-w-4xl mx-auto">
+          <div className="space-y-4">
+            <h1 className="text-4xl lg:text-6xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              ИльяПалочкин
+            </h1>
           </div>
+
+          <TooltipProvider>
+            <div className="flex justify-center space-x-4">
+              {socialLinks.map((link) => (
+                <Tooltip key={link.name}>
+                  <TooltipTrigger asChild>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 ${link.color}`}
+                    >
+                      <Icon name={link.icon as any} size={24} />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{link.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
+            </div>
+          </TooltipProvider>
         </div>
       </div>
 
-      {/* About Artist - moved below image */}
-      <div className="bg-gradient-to-b from-gray-900 to-black py-16 px-6">
-        <div className="text-center text-white space-y-6 max-w-4xl mx-auto">
+      {/* About Artist - positioned at bottom */}
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl relative z-10 px-6">
+        <div className="text-center text-white space-y-6">
           <div className="space-y-4">
             <p className="text-xl font-semibold text-white">Кто я?</p>
             <p className="text-lg text-purple-200">Я молодой исполнитель</p>
