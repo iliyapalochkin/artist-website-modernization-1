@@ -13,32 +13,32 @@ const LatestReleases = () => {
   const releases = [
     {
       id: 1,
-      title: "Midnight Vibes",
+      title: "Малая",
       type: "Single",
       date: "2024",
       cover:
         "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop",
-      streams: "2.1M",
+      streams: "1.2M",
       isNew: true,
     },
     {
       id: 2,
-      title: "Electric Dreams",
-      type: "EP",
+      title: "Прости меня за всё",
+      type: "Single",
       date: "2024",
       cover:
         "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop",
-      streams: "850K",
-      isNew: false,
+      streams: "890K",
+      isNew: true,
     },
     {
       id: 3,
-      title: "Urban Pulse",
-      type: "Album",
+      title: "Влюблённый",
+      type: "Single",
       date: "2023",
       cover:
         "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop",
-      streams: "5.2M",
+      streams: "2.1M",
       isNew: false,
     },
   ];

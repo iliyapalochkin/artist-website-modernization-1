@@ -1,4 +1,10 @@
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import Icon from "@/components/ui/icon";
 
 const HeroSection = () => {
@@ -48,43 +54,50 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=800&fit=crop&crop=face')",
+            "url('https://cdn.poehali.dev/files/f66a526a-4051-49fd-ae49-d820da040b77.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Social Links Header */}
-      <div className="relative z-10 pt-6">
-        <div className="container mx-auto px-6">
-          <div className="flex justify-center space-x-4">
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-2 rounded-full bg-white/10 backdrop-blur-sm text-white ${link.color} transition-all duration-300 hover:bg-white/20 hover:scale-110`}
-              >
-                <Icon name={link.icon as any} size={20} />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-center relative z-10">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-white space-y-6 max-w-4xl mx-auto">
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                DJ АРТИСТ
-              </h1>
-              <p className="text-xl lg:text-2xl text-purple-100 font-light">
-                Создаю музыку, которая зажигает сердца ✨
-              </p>
+      <div className="flex-1 flex flex-col justify-center items-center relative z-10 px-6">
+        <div className="text-center text-white space-y-8 max-w-4xl mx-auto">
+          {/* Artist Name */}
+          <div className="space-y-4">
+            <h1 className="text-5xl lg:text-7xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              ИльяПалочкин
+            </h1>
+          </div>
+
+          {/* Social Links */}
+          <TooltipProvider>
+            <div className="flex justify-center space-x-4">
+              {socialLinks.map((link) => (
+                <Tooltip key={link.name}>
+                  <TooltipTrigger asChild>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-3 rounded-full bg-white/10 backdrop-blur-sm text-white ${link.color} transition-all duration-300 hover:bg-white/20 hover:scale-110`}
+                    >
+                      <Icon name={link.icon as any} size={24} />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{link.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
             </div>
+          </TooltipProvider>
+
+          {/* Description moved to bottom */}
+          <div className="space-y-6 mt-16">
+            <p className="text-xl lg:text-2xl text-purple-100 font-light">
+              Создаю музыку, которая зажигает сердца ✨
+            </p>
 
             <p className="text-lg text-purple-200 max-w-2xl mx-auto leading-relaxed">
               Современная электронная музыка с элементами хип-хопа и
@@ -95,6 +108,12 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
+                onClick={() =>
+                  window.open(
+                    "https://music.yandex.ru/artist/21863635?utm_source=web&utm_medium=copy_link",
+                    "_blank",
+                  )
+                }
               >
                 <Icon name="Play" size={20} />
                 Слушать музыку
@@ -103,6 +122,12 @@ const HeroSection = () => {
                 size="lg"
                 variant="outline"
                 className="border-purple-300 text-purple-100 hover:bg-purple-700/50"
+                onClick={() =>
+                  window.open(
+                    "https://tips.yandex.ru/guest/payment/9184210?wl=yandex_music",
+                    "_blank",
+                  )
+                }
               >
                 <Icon name="Heart" size={20} />
                 Поддержать
