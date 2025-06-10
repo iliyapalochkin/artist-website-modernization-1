@@ -60,42 +60,43 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Artist Name and Social Links - moved to top */}
+      {/* Artist Name - at top */}
       <div className="relative z-10 pt-8 px-6">
-        <div className="text-center text-white space-y-6 max-w-4xl mx-auto">
-          <div className="space-y-4">
-            <h1 className="text-4xl lg:text-6xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              ИльяПалочкин
-            </h1>
-          </div>
-
-          <TooltipProvider>
-            <div className="flex justify-center space-x-4">
-              {socialLinks.map((link) => (
-                <Tooltip key={link.name}>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 ${link.color}`}
-                    >
-                      <Icon name={link.icon as any} size={24} />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{link.name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </div>
-          </TooltipProvider>
+        <div className="text-center text-white max-w-4xl mx-auto">
+          <h1 className="text-4xl lg:text-6xl font-bold font-montserrat bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+            ИльяПалочкин
+          </h1>
         </div>
       </div>
 
-      {/* About Artist - moved to very bottom */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-4xl relative z-10 px-6">
-        <div className="text-center text-white space-y-4">
+      {/* Social Links - centered */}
+      <div className="relative z-10 flex-1 flex items-center justify-center px-6">
+        <TooltipProvider>
+          <div className="flex justify-center space-x-4">
+            {socialLinks.map((link) => (
+              <Tooltip key={link.name}>
+                <TooltipTrigger asChild>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 ${link.color}`}
+                  >
+                    <Icon name={link.icon as any} size={24} />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{link.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </div>
+        </TooltipProvider>
+      </div>
+
+      {/* About Artist - at bottom on image background */}
+      <div className="relative z-10 pb-8 px-6">
+        <div className="text-center text-white space-y-4 max-w-4xl mx-auto">
           <div className="space-y-3">
             <p className="text-xl font-semibold text-white">Кто я?</p>
             <p className="text-lg text-purple-200">Я молодой исполнитель</p>
