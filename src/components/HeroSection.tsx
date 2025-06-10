@@ -107,8 +107,16 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+                variant="outline"
+                className="border-purple-300 text-yellow-400 hover:bg-purple-700/50 font-bold"
+                onClick={() =>
+                  window.open(
+                    "https://tips.yandex.ru/guest/payment/9184210?wl=yandex_music",
+                    "_blank",
+                  )
+                }
               >
+                <Icon name="Heart" size={20} />
                 Поддержать
               </Button>
               <Button
