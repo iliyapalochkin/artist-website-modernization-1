@@ -80,7 +80,7 @@ const HeroSection = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 rounded-full bg-white/10 backdrop-blur-sm text-white ${link.color} transition-all duration-300 hover:bg-white/20 hover:scale-110`}
+                      className={`p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 ${link.color}`}
                     >
                       <Icon name={link.icon as any} size={24} />
                     </a>
