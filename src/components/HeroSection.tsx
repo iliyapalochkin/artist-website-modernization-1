@@ -93,20 +93,8 @@ const HeroSection = () => {
             </div>
           </TooltipProvider>
 
-          {/* Updated description with content from AboutSection */}
+          {/* About Artist */}
           <div className="space-y-6 mt-16">
-            <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold font-montserrat text-white">
-                Донаты в Яндекс Музыке
-              </h2>
-              <p className="text-xl text-purple-100">
-                Поддерживайте любимых артистов
-              </p>
-              <p className="text-lg text-purple-200">
-                На микроавтобус, чтобы поехать в тур
-              </p>
-            </div>
-
             <div className="space-y-4 pt-8 border-t border-purple-300/30">
               <p className="text-xl font-semibold text-white">Кто я?</p>
               <p className="text-lg text-purple-200">Я молодой исполнитель</p>
@@ -119,7 +107,7 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+            <div className="flex justify-center pt-6">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
@@ -132,20 +120,6 @@ const HeroSection = () => {
               >
                 <Icon name="Play" size={20} />
                 Слушать музыку
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-purple-300 text-yellow-400 hover:bg-purple-700/50 font-bold"
-                onClick={() =>
-                  window.open(
-                    "https://tips.yandex.ru/guest/payment/9184210?wl=yandex_music",
-                    "_blank",
-                  )
-                }
-              >
-                <Icon name="Heart" size={20} />
-                Поддержать
               </Button>
             </div>
           </div>
