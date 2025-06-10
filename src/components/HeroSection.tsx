@@ -111,13 +111,13 @@ const HeroSection = () => {
                 className="border-purple-300 text-yellow-400 hover:bg-purple-700/50 font-bold"
                 onClick={() =>
                   window.open(
-                    "https://tips.yandex.ru/guest/payment/9184210?wl=yandex_music",
+                    "https://music.yandex.ru/artist/21863635",
                     "_blank",
                   )
                 }
               >
-                <Icon name="Heart" size={20} />
-                Поддержать
+                <Icon name="Music" size={20} />
+                Слушать музыку
               </Button>
               <Button
                 size="lg"
@@ -125,13 +125,13 @@ const HeroSection = () => {
                 className="border-purple-300 text-yellow-400 hover:bg-purple-700/50 font-bold"
                 onClick={() =>
                   window.open(
-                    "https://tips.yandex.ru/guest/payment/9184210?wl=yandex_music",
+                    "https://music.yandex.ru/artist/21863635",
                     "_blank",
                   )
                 }
               >
-                <Icon name="Heart" size={20} />
-                Поддержать
+                <Icon name="Music" size={20} />
+                Слушать музыку
               </Button>
             </div>
           </div>
