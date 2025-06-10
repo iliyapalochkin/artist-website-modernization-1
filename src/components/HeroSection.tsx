@@ -93,18 +93,33 @@ const HeroSection = () => {
             </div>
           </TooltipProvider>
 
-          {/* Description moved to bottom */}
+          {/* Updated description with content from AboutSection */}
           <div className="space-y-6 mt-16">
-            <p className="text-xl lg:text-2xl text-purple-100 font-light">
-              Создаю музыку, которая зажигает сердца ✨
-            </p>
+            <div className="space-y-6">
+              <h2 className="text-3xl lg:text-4xl font-bold font-montserrat text-white">
+                Донаты в Яндекс Музыке
+              </h2>
+              <p className="text-xl text-purple-100">
+                Поддерживайте любимых артистов
+              </p>
+              <p className="text-lg text-purple-200">
+                На микроавтобус, чтобы поехать в тур
+              </p>
+            </div>
 
-            <p className="text-lg text-purple-200 max-w-2xl mx-auto leading-relaxed">
-              Современная электронная музыка с элементами хип-хопа и
-              поп-культуры. Более 1М прослушиваний на всех платформах.
-            </p>
+            <div className="space-y-4 pt-8 border-t border-purple-300/30">
+              <p className="text-xl font-semibold text-white">Кто я?</p>
+              <p className="text-lg text-purple-200">Я молодой исполнитель</p>
+              <p className="text-lg text-purple-200">
+                И в своем блоге делюсь своими мыслями через свою честную музыку
+                🫀
+              </p>
+              <p className="text-lg text-purple-200 max-w-2xl mx-auto">
+                Уверен, что Ты можешь стать кем угодно, если постараешься.
+              </p>
+            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
