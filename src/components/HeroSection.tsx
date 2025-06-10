@@ -121,7 +121,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-purple-300 text-purple-100 hover:bg-purple-700/50 font-bold"
+                className="border-purple-300 text-yellow-400 hover:bg-purple-700/50 font-bold"
                 onClick={() =>
                   window.open(
                     "https://tips.yandex.ru/guest/payment/9184210?wl=yandex_music",
