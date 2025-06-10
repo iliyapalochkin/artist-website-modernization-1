@@ -108,30 +108,30 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-green-300 text-green-400 hover:bg-green-700/50 font-bold"
+                className="border-purple-300 text-purple-300 hover:bg-purple-700/50 font-bold"
                 onClick={() =>
                   window.open(
-                    "https://www.donationalerts.com/r/iliapalochkin",
+                    "https://music.yandex.ru/artist/21863635",
                     "_blank",
                   )
                 }
               >
-                <Icon name="Heart" size={20} />
-                Поддержать
+                <Icon name="Music" size={20} />
+                Слушать музыку
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-green-300 text-green-400 hover:bg-green-700/50 font-bold"
+                className="border-purple-300 text-purple-300 hover:bg-purple-700/50 font-bold"
                 onClick={() =>
                   window.open(
-                    "https://www.donationalerts.com/r/iliapalochkin",
+                    "https://music.yandex.ru/artist/21863635",
                     "_blank",
                   )
                 }
               >
-                <Icon name="Heart" size={20} />
-                Поддержать
+                <Icon name="Music" size={20} />
+                Слушать музыку
               </Button>
             </div>
           </div>
