@@ -125,19 +125,15 @@ const HeroSection = () => {
               <Icon name="Play" size={20} />
               Слушать музыку
             </Button>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold px-8 py-3"
-              onClick={() =>
-                window.open(
-                  "https://www.donationalerts.com/r/iliapalochkin",
-                  "_blank",
-                )
-              }
+            <a
+              href="https://www.donationalerts.com/r/djmusicdj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <Icon name="Heart" size={20} />
+              <Icon name="Heart" className="mr-2" size={20} />
               Поддержать
-            </Button>
+            </a>
           </div>
         </div>
       </div>
