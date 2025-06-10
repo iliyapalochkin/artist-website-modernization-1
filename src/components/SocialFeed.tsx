@@ -14,36 +14,39 @@ const SocialFeed = () => {
   const posts = [
     {
       id: 1,
-      platform: "ВКонтакте",
-      platformIcon: "Users",
-      content:
-        "Новый трек уже скоро! 🎵 Работаю над свежим материалом в студии. Это будет что-то особенное...",
-      timestamp: "3 часа назад",
-      likes: "1.2K",
-      comments: "47",
-      type: "text",
+      platform: "YouTube",
+      platformIcon: "Play",
+      content: "Новый трек 'Космические ритмы' - официальный клип",
+      timestamp: "2 дня назад",
+      likes: "4.2K",
+      comments: "89",
+      type: "video",
+      videoId: "dQw4w9WgXcQ", // Rick Roll для демо
+      videoType: "youtube",
     },
     {
       id: 2,
-      platform: "ВКонтакте",
-      platformIcon: "Users",
-      content:
-        "Сегодня весь день в студии 🎧 Записываю новые биты и экспериментирую со звуком. Творческий процесс в самом разгаре!",
+      platform: "TikTok",
+      platformIcon: "Video",
+      content: "За кулисами создания нового бита 🎵",
       timestamp: "5 дней назад",
-      likes: "2.8K",
-      comments: "92",
-      type: "text",
+      likes: "12.8K",
+      comments: "234",
+      type: "video",
+      videoId: "7234567890123456789",
+      videoType: "tiktok",
     },
     {
       id: 3,
-      platform: "ВКонтакте",
-      platformIcon: "Users",
-      content:
-        "Благодарю всех за поддержку моего творчества! 🔥 Каждый ваш комментарий мотивирует продолжать создавать музыку. Iliapalochkin всегда на связи!",
+      platform: "YouTube",
+      platformIcon: "Play",
+      content: "Живое выступление на студии звукозаписи",
       timestamp: "1 неделю назад",
-      likes: "3.1K",
-      comments: "156",
-      type: "text",
+      likes: "8.9K",
+      comments: "167",
+      type: "video",
+      videoId: "jNQXAC9IVRw", // Me at the zoo для демо
+      videoType: "youtube",
     },
   ];
 
@@ -103,16 +106,29 @@ const SocialFeed = () => {
 
                 {post.type === "video" && post.videoId && (
                   <div className="rounded-lg overflow-hidden bg-black">
-                    <iframe
-                      src={`https://www.tiktok.com/embed/v2/${post.videoId}`}
-                      width="100%"
-                      height="400"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full rounded-lg"
-                      title={`TikTok video ${post.id}`}
-                    />
+                    {post.videoType === "youtube" ? (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${post.videoId}`}
+                        width="100%"
+                        height="315"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full rounded-lg"
+                        title={`YouTube video ${post.id}`}
+                      />
+                    ) : (
+                      <iframe
+                        src={`https://www.tiktok.com/embed/v2/${post.videoId}`}
+                        width="100%"
+                        height="400"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full rounded-lg"
+                        title={`TikTok video ${post.id}`}
+                      />
+                    )}
                   </div>
                 )}
 
@@ -150,6 +166,10 @@ const SocialFeed = () => {
             <Button className="bg-blue-600 hover:bg-blue-700">
               <Icon name="Users" size={20} />
               Подписаться на iliapalochkin
+            </Button>
+            <Button className="bg-red-600 hover:bg-red-700">
+              <Icon name="Play" size={20} />
+              Подписаться на YouTube
             </Button>
           </div>
         </div>
