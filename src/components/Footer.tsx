@@ -48,10 +48,10 @@ const Footer = () => {
           {/* Logo */}
           <div>
             <h3 className="text-2xl md:text-3xl font-bold font-montserrat bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              DJ АРТИСТ
+              ИльяПалочкин
             </h3>
             <p className="text-gray-400 mt-2 text-sm md:text-base">
-              Создаю музыку, которая зажигает сердца
+              Моя музыка - твои воспоминания
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 text-gray-400 text-sm md:text-base">
               <div className="flex items-center justify-center space-x-2">
                 <Icon name="Mail" size={18} />
-                <span>djartist@music.com</span>
+                <span>palochkin.ilha@yandex.ru</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Icon name="MapPin" size={18} />
@@ -97,7 +97,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="pt-6 md:pt-8 border-t border-gray-800">
             <p className="text-gray-500 text-xs md:text-sm">
-              © 2024 DJ АРТИСТ. Все права защищены.
+              © 2024 ИльяПалочкин. Все права защищены.
               <span className="mx-2">•</span>
               Сделано с ❤️ и музыкой
             </p>
