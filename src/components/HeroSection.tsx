@@ -114,26 +114,24 @@ const HeroSection = () => {
           <div className="flex justify-center gap-4 pt-4">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold px-8 py-3"
-              onClick={() =>
-                window.open(
-                  "https://music.yandex.ru/artist/21863635?utm_source=web&utm_medium=copy_link",
-                  "_blank",
-                )
-              }
+              className="bg-white text-purple-600 hover:bg-purple-50"
             >
-              <Icon name="Play" size={20} />
               Слушать музыку
             </Button>
-            <a
-              href="https://www.donationalerts.com/r/djmusicdj"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-purple-600"
+              asChild
             >
-              <Icon name="Heart" className="mr-2" size={20} />
-              Поддержать
-            </a>
+              <a
+                href="https://www.donationalerts.com/r/qweqweqweqwe"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Поддержать ❤️
+              </a>
+            </Button>
           </div>
         </div>
       </div>
